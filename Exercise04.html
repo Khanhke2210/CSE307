@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <form action="post">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">Registration for Travel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First and last name</td>
+                    <td><input type="text" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><input type="text" name="address" id="address" required></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input type="text" name="phone" id="phone" required></td>
+                </tr>
+                <tr>
+                    <td>Vietnamese Guest</td>
+                    <td><input type="checkbox" name="vnguest" id="vnguest" required></td>
+                </tr>
+                <tr>
+                    <td>Choose tour</td>
+                    <td>
+                        <select name="tours" id="tours">
+                            <optgroup label="Northern">
+                                <option value="HN-VL-SP">Hanoi - Vinh Long - Sapa</option>
+                                <option value="HN-PFP-NB">Hanoi - Perfume Pagoda - Ninh Binh</option>
+                                <option value="HN-CB-TC">Hanoi - Cat Ba - Tuan Chau</option>
+                            </optgroup>
+                            <optgroup label="Central">
+                                <option value="H-BM-DN">Hue - Bach Ma - Da Nang</option>
+                                <option value="NT-DL">Nha Trang - Da Lat</option>
+                                <option value="BMT-GL-KT">Buon Me Thuot - Gia Lai - Kontum</option>
+                            </optgroup>
+                            <optgroup label="Southern">
+                                <option value="HCMC-CT-CM">HCMC - Can Tho - Ca Mau</option>
+                                <option value="HCMC-MT">HCMC - My Tho</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vehicle</td>
+                    <td>
+                        <input type="radio" name="vehicle" id="airplane" checked>
+                        <label for="airplane">Airplane</label>
+                        <input type="radio" name="vehicle" id="car">
+                        <label for="car">Car</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <fieldset>
+                            <legend>Number of groups</legend>
+                            <label for="adults">Adult(s)</label>
+                            <input type="number" name="adults" id="adults" required>
+                            <label for="childrens">Children(s)</label>
+                            <input type="number" name="childrens" id="childrens" required>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Additional notes</td>
+                    <td><textarea style="height: 50px;" name="notes" id="notes" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="align-self: center;">Agree</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Problem 04</title>
+</head>
+<body>
+    <form action="post">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Full Name*</th>
+                    <th><input type="text" name="FullName" value="Quynh" style="width: 500px;" required></th>
+                </tr>
+                <tr>
+                    <th>Email*</th>
+                    <th><input type="email" name="Email" value="quynh.tran@eiu.edu.vn" style="width: 500px;" required></th>
+                </tr>
+                <tr>
+                    <th>Password*</th>
+                    <th><input type="password" name="Password" value="12345678" style="width: 500px;" required></th>
+                </tr>
+                <tr>
+                    <th>Confirm Password*</th>
+                    <th><input type="password" name="ConfirmPassword" value="12345678" style="width: 500px;" required></th>
+                </tr>
+                <tr>
+                    <th>Phone Number*</th>
+                    <th><input type="tel" name="PhoneNumber" value="0967521271" style="width: 500px;" required></th>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <th><textarea name="Address" id="Address" cols="30" rows="10" style="height: 50px; width: 500px;">Room 414.B11, School of CIT, EIU</textarea></th>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <th><input type="text" placeholder="Enter your City"> State <input type="text" placeholder="Enter your State"></th>
+                </tr>
+                <tr>
+                    <th>Zip/Postal Code</th>
+                    <th><input type="text" name="zip" pattern="\d{5}" placeholder="Enter your Zip/Postal Code" style="width: 500px;"></th>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <th style="text-align: left;">
+                        <select name="Country" id="country">
+                            <option value="NO">[Select your Country]</option>
+                            <option value="VN">VN</option>
+                            <option value="CN">CN</option>
+                            <option value="KR">KR</option>
+                            <option value="EN">EN</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Birthday</th>
+                    <th style="text-align: left;"><input type="date" name="Birthday" id="birthday"></th>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <th style="text-align: left;">
+                        <select name="Gender" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Starting Date</th>
+                    <th style="text-align: left;">
+                        <input type="radio" name="season" id="spring" checked>
+                        <label for="spring" style="font-style: normal;">Spring</label>
+                        <input type="radio" name="season" id="spring">
+                        <label for="spring" style="font-style: normal;">Spring</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Comments</th>
+                    <th><textarea name="Address" id="Address" cols="30" rows="10" style="height: 50px; width: 500px;" placeholder="Please send us more information"></textarea></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><button type="submit">Submit</button></th>
+                </tr>
+            </thead>
+        </table>
+    </form>
+</body>
+</html>

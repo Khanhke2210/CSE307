@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Problem 01</title>
+    <style>
+        .registration {
+            width: 400px;
+        }
+        .info01 {
+            width: 250px;
+        }
+        .address {
+            width: 250px;
+            height: 50px;
+        }
+        .year {
+            width: 88px;
+        }
+        .info02 {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration">
+        <form  action="#" name="dangky" method="post">
+            <fieldset>
+                <legend><b>Personal Information</b></legend>
+                <Table>
+                    <tbody>
+                        <tr>
+                            <td>Full Name:</td>
+                            <td><input type="text" name="fullname" id="fullname" class="info01"></td>
+                        </tr>
+                        <tr>
+                            <td>Birthday:</td>
+                            <td>
+                                <select name="day" id="day">
+                                    <option value="01" selected>01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                </select>
+                                Month
+                                <select name="month" id="month">
+                                    <option value="01" selected>01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                </select>
+                                Year
+                                <input type="number" name="year" id="year" min="1900" max="2023" class="year">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>
+                                <input type="radio" name="gender" checked>Nam
+                                <input type="radio" name="gender">Nữ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td>
+                                <textarea name="address" id="address" cols="30" rows="10" class="address"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Telephone:</td>
+                            <td><input type="tel" type="phone" id="phone" class="info01"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" name="email" id="email" class="info01"></td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Credesntials</b></legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Username:</td>
+                            <td><input type="text" name="username" id="username" class="info02"></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="password" id="password" class="info02"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password:</td>
+                            <td><input type="password" name="confirm" id="confirm" class="info02"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

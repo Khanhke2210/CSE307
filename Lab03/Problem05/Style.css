@@ -1,0 +1,77 @@
+.left {
+    padding: 10px; 
+    width: 250px;
+}
+.product02 {
+    width: 15%;
+    height: 15%;
+}
+.product01 {
+    width: 15%;
+    height: 15%;
+}
+.ptitle {
+    color: blue;
+}
+.pblock button {
+    background-color: rgb(255, 102, 0); 
+    border: none; padding: 8px; 
+    color: white; border-radius: 5px; 
+    margin-bottom: 10px;
+}
+.price {
+    color: rgb(255, 51, 0); 
+    font-weight: normal;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hRight i, .hRight a {
+    margin-right: 10px;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+nav {
+    background-color: rgb(102, 255, 153);
+    border: solid black 1px;
+    color: black;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-list li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #900;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+nav input[type="text"] {
+    width: 300px;
+    margin-right: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');

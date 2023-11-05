@@ -26,7 +26,8 @@
 header div {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 5px;
+    align-items: end;
 }
 
 .hRight i, .hRight a {
@@ -41,7 +42,10 @@ nav {
     border: solid black 1px;
     color: black;
 }
-
+.nav-linkhub {
+    border-right: solid black 2px;
+    padding-right: 10px;
+}
 nav div {
     display: flex;
     justify-content: space-between;
@@ -55,6 +59,7 @@ nav div {
 .nav-list li {
     display: inline;
     padding-left: 10px;
+    border-right: solid black 2px;
     padding-right: 10px;
 }
 nav a {

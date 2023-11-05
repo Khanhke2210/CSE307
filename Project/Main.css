@@ -1,0 +1,13 @@
+.w3-bar{
+    width:100%;
+    overflow:hidden;
+    color:#fff!important;
+    background-color:#000!important;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12),
+}
+.w3-top{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1
+}

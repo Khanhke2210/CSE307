@@ -36,11 +36,15 @@
                 <Table>
                     <tbody>
                         <tr>
-                            <td>Full Name:</td>
-                            <td><input type="text" name="fullname" id="fullname" class="info01"></td>
+                            <td class="labels">
+                                <div class="labels">
+                                    <p>Full Name:</p>
+                                </div>
+                            </td>
+                            <td><input type="text" name="fullname" id="fullname" class="info"></td>
                         </tr>
                         <tr>
-                            <td>Birthday:</td>
+                            <td class="labels">Birthday:</td>
                             <td>
                                 <select name="day" id="day">
                                     <option value="01" selected>01</option>
@@ -56,29 +60,29 @@
                                     <option value="04">04</option>
                                 </select>
                                 Year
-                                <input type="number" name="year" id="year" min="1900" max="2023" class="year">
+                                <input type="number" name="year" id="year" min="1900" max="2023" class="info">
                             </td>
                         </tr>
                         <tr>
-                            <td>Gender:</td>
+                            <td class="labels">Gender:</td>
                             <td>
                                 <input type="radio" name="gender" checked>Nam
                                 <input type="radio" name="gender">Nữ
                             </td>
                         </tr>
                         <tr>
-                            <td>Address:</td>
+                            <td class="labels">Address:</td>
                             <td>
-                                <textarea name="address" id="address" cols="30" rows="10" class="address"></textarea>
+                                <textarea name="address" id="address" cols="30" rows="10" class="address" class="info"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td>Telephone:</td>
-                            <td><input type="tel" type="phone" id="phone" class="info01"></td>
+                            <td><input type="tel" type="phone" id="phone" class="info01" class="info"></td>
                         </tr>
                         <tr>
                             <td>Email:</td>
-                            <td><input type="email" name="email" id="email" class="info01"></td>
+                            <td><input type="email" name="email" id="email" class="info01" class="info"></td>
                         </tr>
                     </tbody>
                 </Table>

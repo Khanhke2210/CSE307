@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='main.js'></script>
+</head>
+
+<body>
+  <div class="header">
+    <div>
+      <div class="h-left">
+        <img src="logoABCbook.png" class="logo">
+      </div>
+      <div class="h-right">
+        <i class="fa fa-user-circle"></i><a href="Login.html" class="nav-linkhub">Login</a><a
+          href="Registration.html">Registration</a>
+        <i class="fa fa-shopping-cart"></i><a href="#">Cart</a>
+      </div>
+    </div>
+  </div>
+  <div class="topnav">
+    <div>
+      <a class="active" href="#home">HOMEPAGE</a>
+      <a class="active" href="#">INTRODUCTION</a>
+      <a class="active-last" href="#">CONTACT</a>
+    </div>
+    <div class="search-nav">
+      <input type="text" placeholder="Enter title to find the book..." class="search-field">
+      <button type="submit">Find Books</button>
+    </div>
+  </div>
+  <div class="main-continent">
+    <div class="row">
+      <div class="column1">
+        <div class="sector">
+          <div class="title">
+            <b>BOOKS BY SUBJECT</b>
+          </div>
+          <div class="linkhub">
+            <ul>
+              <li><a href="#">Ngoại Ngữ</a></li>
+              <li><a href="#">Công Nghệ Thông Tin</a></li>
+              <li><a href="#">Luật</a></li>
+              <li><a href="#">Văn Học</a></li>
+              <li><a href="#">Khoa Học Kỹ Thuật</a></li>
+              <li><a href="#">Nông Nghiệp</a></li>
+              <li><a href="#">Lịch Sử, Địa Lý</a></li>
+              <li><a href="#">Kinh Tế</a></li>
+              <li><a href="#">Nghệ Thuật Sống</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="title">
+            <b>BOOKS BY PUBLISHER</b>
+          </div>
+          <div class="linkhub">
+            <ul>
+              <li><a href="#">Nhà xuất bản Trẻ</a></li>
+              <li><a href="#">NXB Thống kê</a></li>
+              <li><a href="#">Kim Đồng</a></li>
+              <li><a href="#">Đại Học Quốc Gia</a></li>
+              <li><a href="#">Văn Hoá Nghệ Thuật</a></li>
+              <li><a href="#">Văn Hóa</a></li>
+              <li><a href="#">Lao Động - Xã Hội</a></li>
+              <li><a href="#">Văn Hóa & Kỹ Thuật</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="column2">
+        <div class="main-sector">
+          <div class="title">
+            <b>MEMBERS REGISTRATION</b>
+          </div>
+          <div class="registration">
+            <form action="#" name="dangky" method="post">
+              <fieldset>
+                <legend><b>Personal Information</b></legend>
+                <Table>
+                  <tbody>
+                    <tr>
+                      <td>Full Name:</td>
+                      <td><input type="text" name="fullname" id="fullname" class="info01"></td>
+                    </tr>
+                    <tr>
+                      <td>Birthday:</td>
+                      <td>
+                        <select name="day" id="day">
+                          <option value="01" selected>01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                        </select>
+                        Month
+                        <select name="month" id="month">
+                          <option value="01" selected>01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                        </select>
+                        Year
+                        <input type="number" name="year" id="year" min="1900" max="2023" class="year">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Gender:</td>
+                      <td>
+                        <input type="radio" name="gender" checked>Nam
+                        <input type="radio" name="gender">Nữ
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Address:</td>
+                      <td>
+                        <textarea name="address" id="address" cols="30" rows="10" class="address"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Telephone:</td>
+                      <td><input type="tel" type="phone" id="phone" class="info01"></td>
+                    </tr>
+                    <tr>
+                      <td>Email:</td>
+                      <td><input type="email" name="email" id="email" class="info01"></td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </fieldset>
+              <fieldset>
+                <legend><b>Credesntials</b></legend>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Username:</td>
+                      <td><input type="text" name="username" id="username" class="info02"></td>
+                    </tr>
+                    <tr>
+                      <td>Password:</td>
+                      <td><input type="password" name="password" id="password" class="info02"></td>
+                    </tr>
+                    <tr>
+                      <td>Confirm Password:</td>
+                      <td><input type="password" name="confirm" id="confirm" class="info02"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+              <div class="formButton">
+                <button type="reset" class="login-button">Login</button><button type="submit" class="cancel-button">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="column3">
+        <div class="sector">
+          <div class="title">
+            <b>BESTSELLERS</b>
+          </div>
+          <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="this.stop()"
+            onMouseOut="this.start()">
+            <table>
+              <tr>
+                <td><img src="EnglishForTech.jpg" class="product-img"></td>
+                <td><a href="#"> <span class="product-title">English For Tech</span></a></td>
+              </tr>
+            </table>
+          </marquee>
+          <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="this.stop()"
+            onMouseOut="this.start()">
+            <table>
+              <tr>
+                <td><img src="BARC.png" class="product-img"></td>
+                <td><a href="#"> <span class="product-title">BARC Computer Science</span></a></td>
+              </tr>
+            </table>
+          </marquee>
+          <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="this.stop()"
+            onMouseOut="this.start()">
+            <table>
+              <tr>
+                <td><img src="Davinci.png" class="product-img"></td>
+                <td><a href="#"> <span class="product-title">The Davinci Code</span></a></td>
+              </tr>
+            </table>
+          </marquee>
+          <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="this.stop()"
+            onMouseOut="this.start()">
+            <table>
+              <tr>
+                <td><img src="harrypotter.png" class="product-img"></td>
+                <td><a href="#"> <span class="product-title">Harry Potter</span></a></td>
+              </tr>
+            </table>
+          </marquee>
+        </div>
+        <div class="sector">
+          <div class="title">
+            <b>THE WEBSITE LINKS</b>
+          </div>
+          <div class="link-section">
+            <select name="linkhub" id="linkhub">
+              <option value="default" selected> --- Select the linking page --- </option>
+              <option value="eiu"><a href="https://lib.eiu.edu.vn/">Eastern International University</a></option>
+              <option value="eiu"><a href="https://eiu.edu.vn/">Eastern International University</a></option>
+            </select>
+          </div>
+        </div>
+        <div class="sector">
+          <div class="title">
+            <b>ACCESS STATISTICS</b>
+          </div>
+          <div class="statics">
+            <p><b>Total Access: 500</b></p>
+            <p><b>Online: 3</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>©2016 - ABC BookStore. Allright Reserved <br>
+        Website is developed to be used as a hands-on exercise in Web-Programming <br>
+        abcookstore@gmail.com</p>
+    </div>
+  </div>
+</body>
+
+</html>

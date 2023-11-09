@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Problem 06: Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        th, td {
+            border: 2px solid black;
+        }
+        th {
+            background-color: rgb(255, 204, 255);
+        }
+        .title {
+            font-size: 25px;
+            color: blue;
+        }
+        .genre {
+            color: red;
+        }
+        .content {
+            font-size: 15px;
+        }
+        .price {
+            color: rgb(255, 51, 0); 
+        }
+        button {
+            background-color: rgb(255, 102, 0); 
+            border: none; padding: 8px; 
+            color: white; border-radius: 5px; 
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" class="title"><b>GIÁO TRÌNH TIN HỌC CƠ BẢN</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="7"><img src="Book.jpg" alt="#"></td>
+            </tr>
+            <tr>
+                <td>Tác giả: <i>Phạm Công Anh</i></td>  
+            </tr>
+            <tr>
+                <td>Đồng tác giả: <i>Lê Việt Nhân</i></td>
+            </tr>
+            <tr>
+                <td>Hiệu đính: <i>Hồng Phúc</i></td>
+            </tr>
+            <tr>
+                <td>Chủ biên: <i>Quách Tuấn Ngọc</i></td>
+            </tr>
+            <tr>
+                <td>Nhà xuất bản: <b class="genre">Nhà Xuất Bản Trẻ</b></td>
+            </tr>
+            <tr>
+                <td>Chủ đề: <b class="genre">Triết học - Chính trị</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p><b class="content">Nội dung của cuốn:</b></p>
+                    <p>
+                        Tin Học Cơ Bản Windows XP gồm có 7 chương: <br>
+                        Chương 1: Một số vấn đề cơ bản. <br>
+                        Chương 2: Sử dụng nhanh công cụ và thanh thực đơn trong My <br>
+                        Computer và Windows Explorer. <br>
+                        Chương 3: Các thao tác trong Windows XP. <br>
+                        Chương 4: Các thiết lập trong Windows XP. <br>
+                        Chương 5: Bảo trì máy tính. <br>
+                        Chương 6: Các phím tắt. <br>
+                        Chương 7: Hỏi và đáp các thắc mắc <br>
+                        Xin trân trọng giới thiệu cuốn sách cùng bạn
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    Giá bán: <b class="price">26.000VNĐ/Cuốn</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <button class="cart-button">
+                        <i class="fas fa-shopping-cart"></i> ĐẶT MUA
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

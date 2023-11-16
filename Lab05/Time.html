@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+
+        #clock {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #clock div {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            document.getElementById('clock').innerHTML =
+                '<div>Date: ' + date + '</div>' +
+                '<div>Time: ' + time + '</div>' +
+                '<div>Time Zone: ' + timeZone + '</div>';
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+    <title>Simple Clock</title>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>

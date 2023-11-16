@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+}
+
+.main-street {
+    border-top: solid gray 1px;
+    background-color: rgb(235, 235, 235);
+}
+
+.logo {
+    width: 30%;
+    height: auto;
+}
+
+.header div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: end;
+}
+
+.h-right i,
+.h-right a {
+    margin-right: 10px;
+    font-weight: bold;
+    text-decoration: underline gray;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-btn {
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(25, 135, 85);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: black;
+}
+
+.nav-btn i {
+    margin-left: 5px;
+    padding-bottom: 5px;
+}
+
+.sub-nav {
+    background-color: rgb(25, 135, 85);
+}
+
+.topnav {
+    justify-content: space-between;
+    display: flex;
+}
+
+.search-nav {
+    width: 30%;
+}
+
+.sector {
+    margin-top: 10px;
+    border: solid rgb(30, 105, 180) 1px;
+    border-radius: 3px;
+}
+
+.main-sector {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    background-color: rgb(30, 105, 180);
+    margin-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.linkhub ul {
+    margin: 0;
+    padding-left: 5;
+    list-style-type: square;
+}
+
+.linkhub li {
+    margin-bottom: 5px;
+}
+
+.linkhub a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+.linkhub a:hover {
+    color: rgb(66, 120, 245);
+}
+
+.product-img {
+    width: 80%;
+    height: 100%;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+}
+
+.link-section {
+    text-align: center;
+    padding: 10px;
+}
+
+.link-section select {
+    height: 40px;
+    width: 220px;
+}
+
+.statics {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.statics b {
+    color: red;
+}
+
+
+.product-present {
+    width: 100%;
+}
+
+.detail-btn {
+    width: 100%;
+    background-color: rgb(15, 110, 250);
+    color: white;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.main-content .row {
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(205, 225, 255);
+}
+
+.main-content .title {
+    border-radius: 5px;
+    background-color: rgb(15, 110, 250);
+}
+
+.info-list {
+    margin-top: 30px;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+}
+
+.info-list a {
+    text-decoration: none;
+}
+
+.publisher-info {
+    margin-top: 30px;
+}
+
+.price {
+    color: red;
+}
+
+.cart-btn {
+    background-color: rgb(255, 102, 0);
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.preview {
+    padding: 15px;
+}
+
+.order-section {
+    align-items: end;
+    text-align: end;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .alert2 {
+            padding: 20px;
+            background-color: green;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .alert3 {
+            padding: 20px;
+            background-color: blue;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .alert4 {
+            padding: 20px;
+            background-color: orange;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Danger
+    </div>
+    <div class="alert2">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Success
+    </div>
+    <div class="alert3">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Neutral
+    </div>
+    <div class="alert4">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Warning
+    </div>
+</body>
+
+</html>

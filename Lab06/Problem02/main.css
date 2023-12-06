@@ -1,0 +1,12 @@
+.p-block {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid gray 1px;
+}
+
+.p-image {
+    width: 80%;
+    padding-top: 50px;
+}

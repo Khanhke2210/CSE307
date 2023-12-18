@@ -1,81 +1,1842 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://kit.fontawesome.com/90de78fb5c.js" crossorigin="anonymous"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style-mobile.css">
+        <title>Cửa Hàng Rubik</title>
+    </head>
+    <body>
+        <!-- https://rubikonline.vn/ -->
+        <header>
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i> HỆ THỐNG CỬA HÀNG
+                        </div>
+                        <div class="col-md-4">
+                            <i class="fa fa-sign-in"></i><a href="#"> ĐĂNG NHẬP</a> hoặc <i class="fa fa-user-plus"></i><a href="#"> ĐĂNG KÝ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">MENU</a>
+                <a href="#" onclick="goSub()">RUBIK ĐẤU GIẢI WCA <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav" id="mySubnav">
+                    <a href="" id="sub-item">Rubik 2x2</a>
+                    <a href="" id="sub-item">Rubik 3x3</a>
+                    <a href="" id="sub-item">Rubik 4x4</a>
+                    <a href="" id="sub-item">Rubik 5x5</a>
+                    <a href="" id="sub-item">Rubik 6x6</a>
+                    <a href="" id="sub-item">Rubik 7x7</a>
+                    <a href="" id="sub-item">Rubik Pyraminx</a>
+                    <a href="" id="sub-item">Rubik Megaminx+ 12 mặt</a>
+                    <a href="" id="sub-item">Rubik Square-1</a>
+                    <a href="" id="sub-item">Rubik Skewb</a>
+                </div>
+                <a href="#" onclick="goSub2()">RUBIK SƯU TẦM <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav-2" id="mySubnav-2">
+                    <a href="" id="sub-item">Rubik 8x8</a>
+                    <a href="" id="sub-item">Rubik 9x9</a>
+                    <a href="" id="sub-item">Rubik 10x10</a>
+                    <a href="" id="sub-item">Rubik 11x11</a>
+                    <a href="" id="sub-item">Rubik 12x12</a>
+                    <a href="" id="sub-item">Rubik 13x13</a>
+                    <a href="" id="sub-item">Rubik 14x14</a>
+                    <a href="" id="sub-item">Rubik 15x15</a>
+                    <a href="" id="sub-item">Rubik Gương (Mirror-Bump)</a>
+                    <a href="" id="sub-item">Rubik Biến Thể Cao Cấp</a>
+                    <a href="" id="sub-item">Rubik Biến Thể Dị Hình</a>
+                </div>
+                <a href="#" onclick="goSub3()" >RUBIK BIẾN THỂ <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav-3" id="mySubnav-3">
+                    <a href="" id="sub-item">Rubik 2x2</a>
+                    <a href="" id="sub-item">Rubik 3x3</a>
+                    <a href="" id="sub-item">Rubik 4x4</a>
+                    <a href="" id="sub-item">Rubik 5x5</a>
+                    <a href="" id="sub-item">Rubik 6x6</a>
+                    <a href="" id="sub-item">Rubik 7x7</a>
+                    <a href="" id="sub-item">Rubik Pyraminx</a>
+                    <a href="" id="sub-item">Rubik Megaminx+ 12 mặt</a>
+                    <a href="" id="sub-item">Rubik Square-1</a>
+                    <a href="" id="sub-item">Rubik Skewb</a>
+                </div>
+                <a href="#" onclick="goSub4()">PHỤ KIỆN RUBIK <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav-4" id="mySubnav-4">
+                    <a href="" id="sub-item">Dầu bôi trơn rubik (silicone)</a>
+                    <a href="" id="sub-item">Đồng hồ bấm giờ rubik (Rubik Timer)</a>
+                    <a href="" id="sub-item">Giấy dán Rubik (Sticker Rubik)</a>
+                    <a href="" id="sub-item">Thảm kê Rubik (Rubik's Stackmat)</a>
+                    <a href="" id="sub-item">Phụ kiện khác</a>
+                </div>
+                <a href="#" onclick="goSub5()">GAME <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav-5" id="mySubnav-5">
+                    <a href="" id="sub-item">Mô Hình Lắp Ráp</a>
+                    <a href="" id="sub-item">BroadGame</a>
+                </div>
+                <a href="#" onclick="goSub6()">BLOG <span><i class="fas fa-angle-down"></i></span></a>
+                <div class="subnav-6" id="mySubnav-6">
+                    <a href="" id="sub-item">Funny</a>
+                    <a href="" id="sub-item">Review Rubik</a>
+                    <a href="" id="sub-item">Hướng Dẫn Chơi Rubik</a>
+                    <a href="" id="sub-item">Tin Tức Rubik</a>
+                </div>
+                <a href="#home" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    var y = document.getElementsByTagName("subnav");      
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }          
+                    $("sub-item").removeClass("active");
+                }
+                function goSub() {
+                    var x = document.getElementById("mySubnav");
+                    var y = document.getElementsByTagName("subnav");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
+                }
+                function goSub2() {
+                    var x = document.getElementById("mySubnav-2");
+                    var y = document.getElementsByClassName("subnav-2");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
 
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>KSR</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='Mobile.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="Main.js" defer></script>
-</head>
+                }
+                function goSub3() {
+                    var x = document.getElementById("mySubnav-3");
+                    var y = document.getElementsByTagName("subnav-3");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
+                }
+                function goSub4() {
+                    var x = document.getElementById("mySubnav-4");
+                    var y = document.getElementsByTagName("subnav-4");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
+                }
+                function goSub5() {
+                    var x = document.getElementById("mySubnav-5");
+                    var y = document.getElementsByTagName("subnav-5");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
+                }
+                function goSub6() {
+                    var x = document.getElementById("mySubnav-6");
+                    var y = document.getElementsByTagName("subnav-6");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                    $("sub-item").removeClass("active");
+                }
+            </script>
 
-<body>
-  <audio class="bgm" id="backgroundMusic" controls>
-    <source src="bgm1.mp3" type="audio/mp3">
-  </audio>
-  <div class="top-nav">
-    <a href="#" class="nav-btn home-btn text-logo">KSR</a>
-    <a href="#" class="nav-btn nav-sub text-normal">Desktops</a>
-    <a href="#" class="nav-btn nav-sub text-normal">Laptops</a>
-    <a href="#" class="nav-btn nav-sub text-normal">Cases</a>
-    <a href="#" class="nav-btn nav-split nav-sub text-normal">Login</a>
-    <a href="#" class="nav-btn nav-split nav-sub text-normal">Register</a>
-    <a href="#" class="nav-btn nav-split nav-sub text-normal">Cart(0)</a>
-  </div>
-  <div class="dropdown-nav">
-    <div class="menu">
-      <button class="dropbtn text-logo">KSR</button>
-      <a href="#" class="nav-btn nav-split nav-sub text-normal">Login</a>
-      <a href="#" class="nav-btn nav-split nav-sub text-normal">Register</a>
-      <a href="#" class="nav-btn nav-split nav-sub text-normal">Cart(0)</a>
-    </div>
-    <div class="dropdown-content">
-      <a href="#" class="dropdown-item text-normal">Desktops</a>
-      <a href="#" class="dropdown-item text-normal">Laptops</a>
-      <a href="#" class="dropdown-item text-normal">Cases</a>
-    </div>
-  </div>
-  <div class="gradient-div" id="changing-div">
-    <table>
-      <tr>
-        <td class="logo-moto">
-          <p><b class="main-logo text-logo">KAISERIN</b><br><b class="moto text-normal">Enhance. Enpower. Embrace</b>
-          </p>
-        </td>
-        <td class="intro-btn">
-          <p class="introduction text-normal">Become one of our members <br> to enjoy eclusive services</p>
-          <button class="register-btn text-normal">JOIN US TODAY</button>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="product-section1">
-    <div class="product-preview">
-      <img src="" alt="">
-    </div>
-    <div class="product-introduction">
+            <div class="mid-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form action="" method="GET">
+                                <div class="input-group mb-3 search-group">
+                                    <input type="text" class="form-control" placeholder="Bạn muốn tìm sản phẩm gì?">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://rubikonline.vn/" target="_blank">
+                                <img src="images/logo.png" alt="MainLogo">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="media shopping-cart-group">
+                                    <div class="align-self-center mr-3">
+                                        <span><i class="fa fa-phone fa-lg"></i></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="media-help">Hỗ trợ & tư vấn</p>
+                                        <a href="#">0987414008</a>
+                                    </div>
+                                </div>
+                                <div class="media shopping-cart-group">
+                                    <div class="align-self-center mr-3">
+                                        <span><i class="fa fa-shopping-bag fa-lg"></i></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <p class="giohang"><b>Giỏ hàng</b></p>
+                                        <p class="pro-num">(0) sản phẩm</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end of row  -->            
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    </div>
-  </div>
-  <div class="product-section2">
-    <div class="product-preview">
-      <img src="" alt="">
-    </div>
-    <div class="product-introduction">
 
-    </div>
-  </div>
-  <div class="product-section3">
+            <nav class="menu-group">
+                <div class="container">
+                    <ul class="desktop-menu">
+                        <li>
+                            <a href="#">RUBIK ĐẤU GIẢI WCA <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Rubik 2x2</a></li>
+                                <li><a href="">Rubik 3x3</a></li>
+                                <li><a href="">Rubik 4x4</a></li>
+                                <li><a href="">Rubik 5x5</a></li>
+                                <li><a href="">Rubik 6x6</a></li>
+                                <li><a href="">Rubik 7x7</a></li>
+                                <li><a href="">Rubik Pyraminx</a></li>
+                                <li><a href="">Rubik Megaminx+ 12 mặt</a></li>
+                                <li><a href="">Rubik Square-1</a></li>
+                                <li><a href="">Rubik Skewb</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">RUBIK SƯU TẦM <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Rubik 8x8</a></li>
+                                <li><a href="">Rubik 9x9</a></li>
+                                <li><a href="">Rubik 10x10</a></li>
+                                <li><a href="">Rubik 11x11</a></li>
+                                <li><a href="">Rubik 12x12</a></li>
+                                <li><a href="">Rubik 13x13</a></li>
+                                <li><a href="">Rubik 14x14</a></li>
+                                <li><a href="">Rubik 15x15</a></li>
+                                <li><a href="">Rubik Gương (Mirror-Bump)</a></li>
+                                <li><a href="">Rubik Biến Thể Cao Cấp</a></li>
+                                <li><a href="">Rubik Biến Thể Dị Hình</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">RUBIK BIẾN THỂ <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Rubik Biến Thể 4 Mặt</a></li>
+                                <li><a href="">Rubik Biến Thể 6 Mặt</a></li>
+                                <li><a href="">Rubik Megaminx+ 12 Mặt</a></li>
+                                <li><a href="">Rubik Biến Thể Dị Hình</a></li>
+                                <li><a href="">Rubik Biến Thể Cao Cấp</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">PHỤ KIỆN RUBIK <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Dầu bôi trơn rubik (silicone)</a></li>
+                                <li><a href="">Đồng hồ bấm giờ rubik (Rubik Timer)</a></li>
+                                <li>
+                                    <a href="">Giấy dán Rubik (Sticker Rubik)</a>
+                                </li>
+                                <li><a href="">Thảm kê Rubik (Rubik's Stackmat)</a></li>
+                                <li><a href="">Phụ kiện khác</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">GAME <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Mô Hình Lắp Ráp</a></li>
+                                <li><a href="">BroadGame</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">XẢ HÀNG</a></li>
+                        <li>
+                            <a href="#">BLOG <span><i class="fas fa-angle-down"></i></span></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Funny</a></li>
+                                <li><a href="">Review Rubik</a></li>
+                                <li><a href="">Hướng Dẫn Chơi Rubik</a></li>
+                                <li><a href="">Tin Tức Rubik</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Slide block 1 -->
+            <div class="Block-1">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href=""><img class="d-block w-100" src="images/slider_1.jpg" alt="First slide"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href=""><img class="d-block w-100" src="images/slider_2.jpg" alt="Second slide"></a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href=""><img class="d-block w-100" src="images/slider_3.jpg" alt="Third slide"></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
 
-  </div>
-  <div class="product-section4">
+            <div class="Block-2">
+                <div class="bl2-item-group">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="container-item"> 
+                                    <a href=""><img src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/rubik-thi-dau-wca.jpg?v=1584727126050" alt="Rubik Truyền Thống" loading="lazy"></a>
+                                    <div class="overlay">
+                                        <div class="bl2-content">
+                                            <a href="">
+                                                <span class="bl2-fline">RUBIK TRUYỀN THỐNG</span>
+                                                <span class="bl2-sline">(480 sản phẩm)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>       
+                            </div>
+                            <div class="col-md-4">
+                                <div class="container-item">
+                                    <a href=""><img src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/rubik-bien-the.jpg?v=1584726692880" alt="Rubik Biến Thể" loading="lazy"></a>
+                                    <div class="overlay">
+                                        <div class="bl2-content">
+                                            <a href="">
+                                                <span class="bl2-fline">RUBIK BIẾN THỂ</span>
+                                                <span class="bl2-sline">(399 sản phẩm)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>         
+                            </div>
+                            <div class="col-md-4">
+                                <div class="container-item"> 
+                                    <a href=""><img src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/fabulube-x-2.jpg?v=1584726347563" alt="Phụ Kiện Rubik" loading="lazy"></a>
+                                    <div class="overlay">
+                                        <div class="bl2-content">
+                                            <a href="">
+                                                <span class="bl2-fline">PHỤ KIỆN RUBIK</span>
+                                                <span class="bl2-sline">(117 sản phẩm)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>             
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  </div>
-</body>
 
+                <div class="moblie-slide">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" >
+                                <a href=""><img class="d-block w-100" src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/rubik-thi-dau-wca.jpg?v=1584727126050" alt="First slide"></a>
+                                <div class="overlay">
+                                    <div class="bl2-content">
+                                        <span class="bl2-fline">RUBIK TRUYỀN THỐNG</span>
+                                        <span class="bl2-sline">(480 sản phẩm)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href=""><img class="d-block w-100" src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/rubik-bien-the.jpg?v=1584726692880" alt="Second slide"></a>
+                                <div class="overlay">
+                                    <div class="bl2-content">
+                                        <span class="bl2-fline">RUBIK BIẾN THỂ</span>
+                                        <span class="bl2-sline">(399 sản phẩm)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href=""><img class="d-block w-100" src="https://bizweb.dktcdn.net/thumb/large/100/316/286/collections/fabulube-x-2.jpg?v=1584726347563" alt="Third slide"></a>
+                                <div class="overlay">
+                                    <div class="bl2-content">
+                                        <span class="bl2-fline">PHỤ KIỆN RUBIK</span>
+                                        <span class="bl2-sline">(117 sản phẩm)</span>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Block-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" id="col-title">                        
+                            <p id="head">VỀ CHÚNG TÔI</p>
+                            <h2 class="bl3-title">                         
+                                <a href="">H2 RUBIK SHOP</a>
+                                <hr>                   
+                            </h2>
+                            <p id="content">Tự hào là người tiên phong trong lĩnh vực, H2 Rubik Shop đã phát triển và được các bạn trẻ toàn quốc biết đến như những địa chỉ mua Rubik uy tín nhất. Mục tiêu của chúng tôi không chỉ là bán đồ chơi trí tuệ với giá cả tốt nhất, chất lượng nhất mà còn là sự thân thiện với người dùng, trải nghiệm mua hàng tốt và không ngừng nâng cao chất lượng dịch vụ.</p>
+                            <div class="bl3-btn">
+                                <div><a href="" id="xemthem">XEM THÊM</a></div>
+                                <div><a href="" id="cuahang">CỬA HÀNG</a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="bl3-image"> 
+                            <a href=""><img src="images/section_about_banner.webp" alt="" loading="lazy"></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Block-3-mobile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col" id="col-title">                        
+                            <p id="head">VỀ CHÚNG TÔI</p>
+                            <h2 class="bl3-title">                         
+                                <a href="">H2 RUBIK SHOP</a>
+                                <hr>                   
+                            </h2>
+                            <p id="content">Tự hào là người tiên phong trong lĩnh vực, H2 Rubik Shop đã phát triển và được các bạn trẻ toàn quốc biết đến như những địa chỉ mua Rubik uy tín nhất. Mục tiêu của chúng tôi không chỉ là bán đồ chơi trí tuệ với giá cả tốt nhất, chất lượng nhất mà còn là sự thân thiện với người dùng, trải nghiệm mua hàng tốt và không ngừng nâng cao chất lượng dịch vụ.</p>
+                            <div class="bl3-btn">
+                                <div><a href="" id="xemthem">XEM THÊM</a></div>
+                                <div><a href="" id="cuahang">CỬA HÀNG</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="bl3-image"> 
+                            <a href=""><img src="images/section_about_banner.webp" alt="" loading="lazy"></a> 
+                        </div>
+                    </div>            
+                </div>
+            </div>
+
+            <div class="Block-4">
+                <header>
+                    <h2>SẢN PHẨM BÁN CHẠY</h2>
+                    <hr>
+                </header>
+                <div id="carouselExampleIndicators-2" class="carousel slide" data-ride="carousel">     
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">                           
+                                <div class="row">
+                                    <div class="col-sm-3">                                
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img clasid="oil"s="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-saturn-lube-silicone-based-goc-dau.jpg" title="Dầu bôi trơn rubik Orbit Saturn" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Saturn cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>                         
+                                    </div>
+                                    <div class="col-sm-3">                                    
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-mars-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Mars" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mars cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">                            
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-venus-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Venus" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                     
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Venus cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>                                                               
+                                    </div>
+                                    <div class="col-sm-3">  
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100" src="images/dau-boi-tron-rubik-orbit-mercury-lube-silicone-based-goc-dau-f52ae3d9-19a8-4fbc-aec4-5cb012a680d9.webp" title="Dầu bôi trơn rubik Orbit Mercury" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mercury cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3">                                    
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-2"><img class="d-block w-100" src="images/dau-boi-tron-rubik-xmd-lube-1.webp" title="Dầu bôi trơn rubik XMD Lube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik XMD Lube</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>                                                                            
+                                    </div>
+                                    <div class="col-sm-3">        
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-3"><img class="d-block w-100" src="images/orbit-alpha-orbit-beta-lube-4c8e8c4a-682a-4676-8911-e28278673512-2e466fd3-e287-4c03-9a3a-7615ea01b4a2.webp" title="Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                            </div>
+                                        </div>                                       
+                                        <div class="bl4-content">
+                                            <a href="">Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp</a>
+                                            <p>180.000<u>đ</u></p>
+                                        </div>                                                             
+                                    </div>
+                                    <div class="col-sm-3">                                    
+                                        <div class="bl4-image">
+                                            <a href=""><img class="d-block w-100" src="images/orbit-beta-lube-dau-boi-tron-rubik-cao-cap-352329f1-2128-46ae-84f6-b13c47c5ac72.webp" title="Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                        
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>                                                 
+                                    </div>
+                                    <div class="col-sm-3">                                     
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-4"><img class="d-block w-100" src="images/orbit-alpha-dau-boi-tron-rubik-cao-cap.webp" title="Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>                                                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators-2" data-slide-to="1"></li>
+                    </ol>
+                    <div class="bl3-btn">
+                        <div><a href="#" id="xemthem">XEM THÊM</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Block-4-mobile">
+                <header>
+                    <h2>SẢN PHẨM BÁN CHẠY</h2>
+                    <hr>
+                </header>
+                <div id="mobile-2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-2"><img class="d-block w-100" src="images/dau-boi-tron-rubik-xmd-lube-1.webp" title="Dầu bôi trơn rubik XMD Lube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik XMD Lube</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div> 
+                                    </td>
+                                    <td>                                   
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-mars-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Mars" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mars cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="carousel-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-venus-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Venus" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                     
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Venus cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>                                          
+                                    </td>
+                                    <td>                                   
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100" src="images/dau-boi-tron-rubik-orbit-mercury-lube-silicone-based-goc-dau-f52ae3d9-19a8-4fbc-aec4-5cb012a680d9.webp" title="Dầu bôi trơn rubik Orbit Mercury" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mercury cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="carousel-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                       <div class="bl4-image">
+                                            <a href="" id="oil-2"><img class="d-block w-100" src="images/dau-boi-tron-rubik-xmd-lube-1.webp" title="Dầu bôi trơn rubik XMD Lube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik XMD Lube</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div> 
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-3"><img class="d-block w-100" src="images/orbit-alpha-orbit-beta-lube-4c8e8c4a-682a-4676-8911-e28278673512-2e466fd3-e287-4c03-9a3a-7615ea01b4a2.webp" title="Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                            </div>
+                                        </div>                                       
+                                        <div class="bl4-content">
+                                            <a href="">Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp</a>
+                                            <p>180.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="carousel-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href=""><img class="d-block w-100" src="images/orbit-beta-lube-dau-boi-tron-rubik-cao-cap-352329f1-2128-46ae-84f6-b13c47c5ac72.webp" title="Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                        
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-4"><img class="d-block w-100" src="images/orbit-alpha-dau-boi-tron-rubik-cao-cap.webp" title="Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#mobile-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mobile-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mobile-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#mobile-2" data-slide-to="1"></li>
+                        <li data-target="#mobile-2" data-slide-to="2"></li>
+                        <li data-target="#mobile-2" data-slide-to="3"></li>
+                    </ol>
+                    <div class="bl3-btn">
+                        <div><a href="#xemthem" id="xemthem">XEM THÊM</a></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Block-5">
+                <header>
+                    <h2>HÀNG MỚI VỀ</h2>
+                    <hr>
+                </header>
+                <div id="carouselExampleIndicators-3" class="carousel slide" data-ride="carousel">     
+                    <div class="carousel-indicators" id="bl5-indi">        
+                        <!-- <li data-target="#carouselExampleIndicators-3" data-slide-to="0" class="active">RUBIK</li>
+                        <li data-target="#carouselExampleIndicators-3" data-slide-to="1">PHỤ KIỆN RUBIK</li>
+                        <li data-target="#carouselExampleIndicators-3" data-slide-to="2">BROAD GAME</li> -->
+                        <a data-target="#carouselExampleIndicators-3" data-slide-to="0" class="active">RUBIK</a>
+                        <a data-target="#carouselExampleIndicators-3" data-slide-to="1">PHỤ KIỆN RUBIK</a>
+                        <a data-target="#carouselExampleIndicators-3" data-slide-to="2">BROAD GAME</a>
+                    </div>                    
+                    <div class="carousel-inner">
+                        <div class="container-fluid">            
+                            <div class="carousel-item active">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-1"><img class="d-block w-100" src="images/combo-rubik-2x2-3x3-4x4-5x5-diansheng-co-nam-cham-san-3.webp" title="Combo Rubik 2x2 3x3 4x4 5x5 DianSheng Có nam châm sẵn" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Combo Rubik 2x2 3x3 4x4 5x5 DianSheng Có nam châm sẵn</a>
+                                            <p>510.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-2"><img class="d-block w-100" src="images/do-choi-rubik-3x3-moyu-weilong-wrm-2021-co-nam-cham-tuy-chinh-cao-cap.webp" title="Rubik 3x3 MoYu Weilong WRM 2021 có nam châm tùy chỉnh cao cấp" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik 3x3 MoYu Weilong WRM 2021 có nam châm tùy chỉnh cao cấp</a>
+                                            <p>399.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-3"><img class="d-block w-100" src="images/rubik-bien-the-mf8-3x4x5-a.webp" title="Rubik Biến thể MF8 3x4x5" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik Biến thể MF8 3x4x5</a>
+                                            <p>450.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-4"><img class="d-block w-100" src="images/lanlan-butterflower-cube-2.webp" title="LanLan Butterflower Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">LanLan Butterflower Cube</a>
+                                            <p>550.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-5"><img class="d-block w-100" src="images/shengshou-sengso-7x7-mastermorphix-cube-1.webp" title="ShengShou SengSo 7x7 Mastermorphix Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">ShengShou SengSo 7x7 Mastermorphix Cube</a>
+                                            <p>600.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-6"><img class="d-block w-100" src="images/shengshou-sengso-8x8-mastermorphix-cube-1.webp" title="ShengShou SengSo 8x8 Mastermorphix Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">ShengShou SengSo 8x8 Mastermorphix Cube</a>
+                                            <p>630.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-7"><img class="d-block w-100" src="images/shengshou-examinx-rubik-12-mat-11x11-megaminx.webp" title="Rubik Examinx - Megaminx 11x11 Shengshou biến thể 12 mặt 11 tầng" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik Examinx - Megaminx 11x11 Shengshou biến thể 12 mặt 11 tầng</a>
+                                            <p>6.500.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-8"><img class="d-block w-100" src="images/gan-251-leap.webp" title="Rubik 2x2 GAN 251 M Leap Rubik 2x2 cao cấp nhất thế giới" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik 2x2 GAN 251 M Leap Rubik 2x2 cao cấp nhất thế giới</a>
+                                            <p>650.000<u>đ</u></p>
+                                        </div> 
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-3">                                
+                                            <div class="bl4-image">
+                                                <a href="" id="oil"><img clasid="oil"s="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-saturn-lube-silicone-based-goc-dau.jpg" title="Dầu bôi trơn rubik Orbit Saturn cao cấp gốc silicone-based" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>
+                                            <div class="bl4-content">
+                                                <a href="">Dầu bôi trơn rubik Orbit Saturn cao cấp gốc silicone-based</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>                         
+                                        </div>
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-mars-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Mars cao cấp gốc silicone-based" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>
+                                            <div class="bl4-content">
+                                                <a href="">Dầu bôi trơn rubik Orbit Mars cao cấp gốc silicone-based</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">                            
+                                            <div class="bl4-image">
+                                                <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-venus-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Venus cao cấp gốc silicone-based" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>                                     
+                                            <div class="bl4-content">
+                                                <a href="">Dầu bôi trơn rubik Orbit Venus cao cấp gốc silicone-based</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-sm-3">  
+                                            <div class="bl4-image">
+                                                <a href="" id="oil"><img class="d-block w-100" src="images/dau-boi-tron-rubik-orbit-mercury-lube-silicone-based-goc-dau-f52ae3d9-19a8-4fbc-aec4-5cb012a680d9.webp" title="Dầu bôi trơn rubik Orbit Mercury cao cấp gốc silicone-based" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>                                    
+                                            <div class="bl4-content">
+                                                <a href="">Dầu bôi trơn rubik Orbit Mercury cao cấp gốc silicone-based</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href="" id="oil-2"><img class="d-block w-100" src="images/dau-boi-tron-rubik-xmd-lube-1.webp" title="Dầu bôi trơn rubik XMD Lube" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                    
+                                            <div class="bl4-content">
+                                                <a href="">Dầu bôi trơn rubik XMD Lube</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>                                                                            
+                                        </div>
+                                        <div class="col-sm-3">        
+                                            <div class="bl4-image">
+                                                <a href="" id="oil-3"><img class="d-block w-100" src="images/orbit-alpha-orbit-beta-lube-4c8e8c4a-682a-4676-8911-e28278673512-2e466fd3-e287-4c03-9a3a-7615ea01b4a2.webp" title="Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                                </div>
+                                            </div>                                       
+                                            <div class="bl4-content">
+                                                <a href="">Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp</a>
+                                                <p>180.000<u>đ</u></p>
+                                            </div>                                                             
+                                        </div>
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href=""><img class="d-block w-100" src="images/orbit-beta-lube-dau-boi-tron-rubik-cao-cap-352329f1-2128-46ae-84f6-b13c47c5ac72.webp" title="Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                        
+                                            <div class="bl4-content">
+                                                <a href="">Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                                <p>99.000<u>đ</u></p>
+                                            </div>                                                 
+                                        </div>
+                                        <div class="col-sm-3">                                     
+                                            <div class="bl4-image">
+                                                <a href="" id="oil-4"><img class="d-block w-100" src="images/orbit-alpha-dau-boi-tron-rubik-cao-cap.webp" title="Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                   
+                                            <div class="bl4-content">
+                                                <a href="">Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                                <p>99.000<u>đ</u></p>
+                                            </div>                                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-3">                                
+                                            <div class="bl4-image">
+                                                <a href="" id="broad"><img clasid="oil"s="d-block w-100"  src="images/covaynam.jpg" title="Cờ Vây nam châm" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>
+                                            <div class="bl4-content">
+                                                <a href="">Cờ Vây nam châm</a>
+                                                <p>200.000<u>đ</u></p>
+                                            </div>                         
+                                        </div>
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href="" id="broad-1"><img class="d-block w-100"  src="images/coshoji.jpg" title="Cờ Shogi Nhật Bản" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>
+                                            <div class="bl4-content">
+                                                <a href="">Cờ Shogi Nhật Bản</a>
+                                                <p>180.000<u>đ</u></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">                            
+                                            <div class="bl4-image">
+                                                <a href="" id="broad-2"><img class="d-block w-100"  src="images/bee.jpg" title="Save the bee - Đập tổ cứu ong" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>                                     
+                                            <div class="bl4-content">
+                                                <a href="">Save the bee - Đập tổ cứu ong</a>
+                                                <p>15.000<u>đ</u></p>
+                                            </div>                                                               
+                                        </div>
+                                        <div class="col-sm-3">  
+                                            <div class="bl4-image">
+                                                <a href="" id="broad-3"><img class="d-block w-100" src="images/meono.jpg" title="Mèo Nổ bản đẹp - Người lớn (NSFW)" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                                </div>
+                                            </div>                                    
+                                            <div class="bl4-content">
+                                                <a href="">Mèo Nổ bản đẹp - Người lớn (NSFW)</a>
+                                                <p>135.000<u>đ</u></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href="" id="broad"><img class="d-block w-100" src="images/cotyphu.jpg" title="Monopoly - Cờ tỉ phú (tiếng anh)" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                    
+                                            <div class="bl4-content">
+                                                <a href="">Monopoly - Cờ tỉ phú (tiếng anh)</a>
+                                                <p>200.000<u>đ</u></p>
+                                            </div>                                                                            
+                                        </div>
+                                        <div class="col-sm-3">        
+                                            <div class="bl4-image">
+                                                <a href="" id="broad"><img class="d-block w-100" src="images/imploding-kittens-b-n-m-r-ng-m-o-n-c-v-ng-c-copy.webp" title="Imploding Kittens - Bản mở rộng mèo nổ ( Có vòng cổ)" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                                </div>
+                                            </div>                                       
+                                            <div class="bl4-content">
+                                                <a href="">Imploding Kittens - Bản mở rộng mèo nổ ( Có vòng cổ)</a>
+                                                <p>150.000<u>đ</u></p>
+                                            </div>                                                             
+                                        </div>
+                                        <div class="col-sm-3">                                    
+                                            <div class="bl4-image">
+                                                <a href=""><img class="d-block w-100" src="images/dixit-odyssey-1-plus-2-plus-3-1-copy.webp" title="Dixit Odyssey (1+2+3)" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                        
+                                            <div class="bl4-content">
+                                                <a href="">Dixit Odyssey (1+2+3)</a>
+                                                <p>60.000<u>đ</u></p>
+                                            </div>                                                 
+                                        </div>
+                                        <div class="col-sm-3">                                     
+                                            <div class="bl4-image">
+                                                <a href=""><img class="d-block w-100" src="images/red7-1-copy.webp" title="Red 7 – Mục tiêu không bất biến" loading="lazy"></a>
+                                                <div class="bl4-buy">
+                                                    <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                    <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                                </div>
+                                            </div>                                   
+                                            <div class="bl4-content">
+                                                <a href="">Red 7 – Mục tiêu không bất biến</a>
+                                                <p>130.000<u>đ</u></p>
+                                            </div>                                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bl5-btn">
+                        <div><a href="#" id="xemthem">XEM THÊM</a></div>
+                    </div>           
+                </div>
+            </div>
+
+            <div class="Block-5-mobile">
+                <header>
+                    <h2>HÀNG MỚI VỀ</h2>
+                    <hr>
+                </header>
+                <div id="mobile-3" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-indicators" id="bl5-indi">        
+                        <a data-target="#mobile-3" data-slide-to="0" class="active">RUBIK</a>
+                        <a data-target="#mobile-3" data-slide-to="1">PHỤ KIỆN RUBIK</a>
+                        <a data-target="#mobile-3" data-slide-to="2">BROAD GAME</a>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-1"><img class="d-block w-100" src="images/combo-rubik-2x2-3x3-4x4-5x5-diansheng-co-nam-cham-san-3.webp" title="Combo Rubik 2x2 3x3 4x4 5x5 DianSheng Có nam châm sẵn" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Combo Rubik 2x2 3x3 4x4 5x5 DianSheng Có nam châm sẵn</a>
+                                            <p>510.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-2"><img class="d-block w-100" src="images/do-choi-rubik-3x3-moyu-weilong-wrm-2021-co-nam-cham-tuy-chinh-cao-cap.webp" title="Rubik 3x3 MoYu Weilong WRM 2021 có nam châm tùy chỉnh cao cấp" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik 3x3 MoYu Weilong WRM 2021 có nam châm tùy chỉnh cao cấp</a>
+                                            <p>399.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-3"><img class="d-block w-100" src="images/rubik-bien-the-mf8-3x4x5-a.webp" title="Rubik Biến thể MF8 3x4x5" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik Biến thể MF8 3x4x5</a>
+                                            <p>450.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-4"><img class="d-block w-100" src="images/lanlan-butterflower-cube-2.webp" title="LanLan Butterflower Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">LanLan Butterflower Cube</a>
+                                            <p>550.000<u>đ</u></p>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-5"><img class="d-block w-100" src="images/shengshou-sengso-7x7-mastermorphix-cube-1.webp" title="ShengShou SengSo 7x7 Mastermorphix Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">ShengShou SengSo 7x7 Mastermorphix Cube</a>
+                                            <p>600.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-6"><img class="d-block w-100" src="images/shengshou-sengso-8x8-mastermorphix-cube-1.webp" title="ShengShou SengSo 8x8 Mastermorphix Cube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">ShengShou SengSo 8x8 Mastermorphix Cube</a>
+                                            <p>630.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-7"><img class="d-block w-100" src="images/shengshou-examinx-rubik-12-mat-11x11-megaminx.webp" title="Rubik Examinx - Megaminx 11x11 Shengshou biến thể 12 mặt 11 tầng" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik Examinx - Megaminx 11x11 Shengshou biến thể 12 mặt 11 tầng</a>
+                                            <p>6.500.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="rubik-8"><img class="d-block w-100" src="images/gan-251-leap.webp" title="Rubik 2x2 GAN 251 M Leap Rubik 2x2 cao cấp nhất thế giới" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Rubik 2x2 GAN 251 M Leap Rubik 2x2 cao cấp nhất thế giới</a>
+                                            <p>650.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="carousel-item">
+                            <table cellpadding="0">
+                                <tr>
+                                    <td>                   
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img clasid="oil"s="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-saturn-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Saturn" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Saturn cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-mars-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Mars" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mars cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100"  src="images/dau-boi-tron-rubik-orbit-venus-lube-silicone-based-goc-dau.webp" title="Dầu bôi trơn rubik Orbit Venus" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                     
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Venus cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil"><img class="d-block w-100" src="images/dau-boi-tron-rubik-orbit-mercury-lube-silicone-based-goc-dau-f52ae3d9-19a8-4fbc-aec4-5cb012a680d9.webp" title="Dầu bôi trơn rubik Orbit Mercury" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik Orbit Mercury cao cấp gốc silicone-based</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-2"><img class="d-block w-100" src="images/dau-boi-tron-rubik-xmd-lube-1.webp" title="Dầu bôi trơn rubik XMD Lube" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Dầu bôi trơn rubik XMD Lube</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div> 
+                                    </td>
+                                    <td>
+                                         <div class="bl4-image">
+                                            <a href="" id="oil-3"><img class="d-block w-100" src="images/orbit-alpha-orbit-beta-lube-4c8e8c4a-682a-4676-8911-e28278673512-2e466fd3-e287-4c03-9a3a-7615ea01b4a2.webp" title="Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                            </div>
+                                        </div>                                       
+                                        <div class="bl4-content">
+                                            <a href="">Combo Orbit Alpha Lube và Beta Lube 5g dầu bôi trơn rubik cao cấp</a>
+                                            <p>180.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                         <div class="bl4-image">
+                                            <a href=""><img class="d-block w-100" src="images/orbit-beta-lube-dau-boi-tron-rubik-cao-cap-352329f1-2128-46ae-84f6-b13c47c5ac72.webp" title="Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                        
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Beta Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="oil-4"><img class="d-block w-100" src="images/orbit-alpha-dau-boi-tron-rubik-cao-cap.webp" title="Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i> XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Orbit Alpha Lube dầu bôi trơn rubik cao cấp bền bỉ - Angstrom Lube Việt Nam</a>
+                                            <p>99.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="carousel-item">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad"><img clasid="oil"s="d-block w-100"  src="images/covaynam.jpg" title="Cờ Vây nam châm" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Cờ Vây nam châm</a>
+                                            <p>200.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad-1"><img class="d-block w-100"  src="images/coshoji.jpg" title="Cờ Shogi Nhật Bản" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>
+                                        <div class="bl4-content">
+                                            <a href="">Cờ Shogi Nhật Bản</a>
+                                            <p>180.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad-2"><img class="d-block w-100"  src="images/bee.jpg" title="Save the bee - Đập tổ cứu ong" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                     
+                                        <div class="bl4-content">
+                                            <a href="">Save the bee - Đập tổ cứu ong</a>
+                                            <p>15.000<u>đ</u></p>
+                                        </div> 
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad-3"><img class="d-block w-100" src="images/meono.jpg" title="Mèo Nổ bản đẹp - Người lớn (NSFW)" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="tuychon"><i class="fa fa-link"></i> Tùy chọn</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Mèo Nổ bản đẹp - Người lớn (NSFW)</a>
+                                            <p>135.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad"><img class="d-block w-100" src="images/cotyphu.jpg" title="Monopoly - Cờ tỉ phú (tiếng anh)" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"> </i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                    
+                                        <div class="bl4-content">
+                                            <a href="">Monopoly - Cờ tỉ phú (tiếng anh)</a>
+                                            <p>200.000<u>đ</u></p>
+                                        </div>  
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href="" id="broad"><img class="d-block w-100" src="images/imploding-kittens-b-n-m-r-ng-m-o-n-c-v-ng-c-copy.webp" title="Imploding Kittens - Bản mở rộng mèo nổ ( Có vòng cổ)" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="hethang"><i class="fa fa-shopping-bag"></i> HẾT HÀNG</a>
+                                            </div>
+                                        </div>                                       
+                                        <div class="bl4-content">
+                                            <a href="">Imploding Kittens - Bản mở rộng mèo nổ ( Có vòng cổ)</a>
+                                            <p>150.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href=""><img class="d-block w-100" src="images/dixit-odyssey-1-plus-2-plus-3-1-copy.webp" title="Dixit Odyssey (1+2+3)" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                        
+                                        <div class="bl4-content">
+                                            <a href="">Dixit Odyssey (1+2+3)</a>
+                                            <p>60.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="bl4-image">
+                                            <a href=""><img class="d-block w-100" src="images/red7-1-copy.webp" title="Red 7 – Mục tiêu không bất biến" loading="lazy"></a>
+                                            <div class="bl4-buy">
+                                                <a href="" id="muahang"><i class="fa fa-shopping-bag"></i> MUA HÀNG</a>
+                                                <a href="" id="xemchitiet"><i class="fa fa-eye"></i>XEM CHI TIẾT</a>
+                                            </div>
+                                        </div>                                   
+                                        <div class="bl4-content">
+                                            <a href="">Red 7 – Mục tiêu không bất biến</a>
+                                            <p>130.000<u>đ</u></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bl5-btn">
+                        <div><a href="#" id="xemthem">XEM THÊM</a></div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="Block-6">
+                <header>
+                    <h2><a href="">TIN TỨC MỚI NHẤT</a></h2>
+                    <hr>
+                </header>
+                <div id="carouselExampleIndicators-4" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- <div class="container-fluid"> -->
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/nguoi-dan-ong-95-tuoi-luyen-tap-rubik-hang-ngay.webp" title="Người đàn ông luyện tập rubik hàng ngày" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">02</span>
+                                                        <span class="bl6-month">THÁNG 06</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">NGƯỜI ĐÀN ÔNG 96 TUỔI LUYỆN TẬP GIẢI RUBIK HÀNG NGÀY</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">“Rubik giữ cho tâm trí của tôi luôn minh mẫn”, Rob Andrew, một kỹ sư nghỉ hưu, từng làm việc tr...</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/nhung-dua-tre-lon-len-cung-rubik.webp" title="Những đứa trẻ lớn lên cùng Rubik" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">25</span>
+                                                        <span class="bl6-month">THÁNG 05</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Những đứa trẻ lớn lên cùng Rubik</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">“Đã từ rất lâu rồi, con trai tôi và những chiếc Rubik của nó đã không thể tách rời nhau được. G...</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/feliks-zemdegs-tu-cau-be-trau-tre-den-chang-trai-vang-trong-lang-rubik.webp" title="Feliks Zemdegs: Từ cậu bé trẩu tre đến chàng trai vàng trong làng Rubik" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">11</span>
+                                                        <span class="bl6-month">THÁNG 05</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Feliks Zemdegs: Từ cậu bé "trẩu tre" đến chàng trai vàng trong làng Rubik</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Không cần phải là một người chơi Rubik, chắc hẳn bạn cũng đã từng nghe qua cái tên Feliks Zemdeg...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/ky-luc-xoay-rubik-nhanh-nhat-the-gioi-3-47s-yusheng-du.webp" title="Kỷ lục xoay Rubik nhanh nhất thế giới 3.47s, liệu có xứng đáng?" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">16</span>
+                                                        <span class="bl6-month">THÁNG 04</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Kỷ lục xoay Rubik nhanh nhất thế giới 3.47s, liệu có xứng đáng?</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Suốt khoảng thời gian vừa qua, cộng đồng cuber trên internet luôn sục sôi vì kỉ lục thế giới 3x3...</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/gan-356m-da-thay-doi-hoan-toan-thi-truong-nhu-the-nao.webp" title="GAN 356M đã thay đổi hoàn toàn thị trường như thế nào" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">07</span>
+                                                        <span class="bl6-month">THÁNG 04</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">GAN 356M đã thay đổi hoàn toàn thị trường như thế nào</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Chắc hẳn bạn đã không còn lạ gì với chiếc GAN 356M mới được hãng cho ra mắt đầu năm 2020. Chiếc...</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/tranh-luan-giua-giai-dau-vo-dich-the-gioi-cua-red-bull-va-wca.webp" title="Tranh luận giữa giải đấu vô địch thế giới của Red Bull và WCA" loading="lazy"></a>   
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">29</span>
+                                                        <span class="bl6-month">THÁNG 03</span>
+                                                    </a>
+                                                </div>  
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Tranh luận giữa giải đấu vô địch thế giới của Red Bull và WCA</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Bắt đầu từ tháng 1/2018, theo trang Web chính thức của Red Bull sẽ có một giải vô địch thế giới...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators-4" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators-4" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators-4" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators-4" data-slide-to="1"></li>
+                    </ol>
+                    <div class="bl6-btn">
+                        <a href="" id="xemthem">XEM THÊM</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Block-6-mobile">
+                <header>
+                    <h2><a href="">TIN TỨC MỚI NHẤT</a></h2>
+                    <hr>
+                </header>
+                <div id="mobile-4" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="container-fluid">
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/nguoi-dan-ong-95-tuoi-luyen-tap-rubik-hang-ngay.webp" title="Người đàn ông luyện tập rubik hàng ngày" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">02</span>
+                                                        <span class="bl6-month">THÁNG 06</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">NGƯỜI ĐÀN ÔNG 96 TUỔI LUYỆN TẬP GIẢI RUBIK HÀNG NGÀY</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">“Rubik giữ cho tâm trí của tôi luôn minh mẫn”, Rob Andrew, một kỹ sư nghỉ hưu, từng làm việc tr...</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/nhung-dua-tre-lon-len-cung-rubik.webp" title="Những đứa trẻ lớn lên cùng Rubik" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">25</span>
+                                                        <span class="bl6-month">THÁNG 05</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Những đứa trẻ lớn lên cùng Rubik</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">“Đã từ rất lâu rồi, con trai tôi và những chiếc Rubik của nó đã không thể tách rời nhau được. G...</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/feliks-zemdegs-tu-cau-be-trau-tre-den-chang-trai-vang-trong-lang-rubik.webp" title="Feliks Zemdegs: Từ cậu bé trẩu tre đến chàng trai vàng trong làng Rubik" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">11</span>
+                                                        <span class="bl6-month">THÁNG 05</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Feliks Zemdegs: Từ cậu bé "trẩu tre" đến chàng trai vàng trong làng Rubik</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Không cần phải là một người chơi Rubik, chắc hẳn bạn cũng đã từng nghe qua cái tên Feliks Zemdeg...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/ky-luc-xoay-rubik-nhanh-nhat-the-gioi-3-47s-yusheng-du.webp" title="Kỷ lục xoay Rubik nhanh nhất thế giới 3.47s, liệu có xứng đáng?" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">16</span>
+                                                        <span class="bl6-month">THÁNG 04</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Kỷ lục xoay Rubik nhanh nhất thế giới 3.47s, liệu có xứng đáng?</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Suốt khoảng thời gian vừa qua, cộng đồng cuber trên internet luôn sục sôi vì kỉ lục thế giới 3x3...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/gan-356m-da-thay-doi-hoan-toan-thi-truong-nhu-the-nao.webp" title="GAN 356M đã thay đổi hoàn toàn thị trường như thế nào" loading="lazy"></a>
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">07</span>
+                                                        <span class="bl6-month">THÁNG 04</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">GAN 356M đã thay đổi hoàn toàn thị trường như thế nào</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Chắc hẳn bạn đã không còn lạ gì với chiếc GAN 356M mới được hãng cho ra mắt đầu năm 2020. Chiếc...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="bl6-image">
+                                                <a href=""><img class="d-block w-100" src="images/tranh-luan-giua-giai-dau-vo-dich-the-gioi-cua-red-bull-va-wca.webp" title="Tranh luận giữa giải đấu vô địch thế giới của Red Bull và WCA" loading="lazy"></a>   
+                                                <div class="bl6-date">
+                                                    <a href="">
+                                                        <span class="bl6-day">29</span>
+                                                        <span class="bl6-month">THÁNG 03</span>
+                                                    </a>
+                                                </div>  
+                                            </div>
+                                            
+                                            <div class="bl6-content">
+                                                <a href="">Tranh luận giữa giải đấu vô địch thế giới của Red Bull và WCA</a>
+                                                <p class="post"><i class="fa fa-user"></i> Đăng bởi: Nguyễn Quang Anh</p>
+                                                <p class="detail">Bắt đầu từ tháng 1/2018, theo trang Web chính thức của Red Bull sẽ có một giải vô địch thế giới...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <a class="carousel-control-prev" href="#mobile-4" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mobile-4" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a> -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mobile-4" data-slide-to="0" class="active"></li>
+                        <li data-target="#mobile-4" data-slide-to="1"></li>
+                        <li data-target="#mobile-4" data-slide-to="2"></li>
+                        <li data-target="#mobile-4" data-slide-to="3"></li>
+                        <li data-target="#mobile-4" data-slide-to="4"></li>
+                        <li data-target="#mobile-4" data-slide-to="5"></li>
+                    </ol>
+                    <div class="bl6-btn">
+                        <a href="" id="xemthem">XEM THÊM</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <footer>
+            <div class="Block-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>VỀ CHÚNG TÔI</h2>
+                            <ul class="contact">
+                                <li><b>H2 RUBIK SHOP - CỘNG ĐỒNG RUBIK UY TÍN NHẤT VIỆT NAM</b></li>
+                                <li><p><b>Địa chỉ</b>: Số 164 Ngõ 33 Văn Cao, Ba Đình, Hà Nội</p></li>
+                                <li><p><b>Điện thoại</b>: 0987414008</p></li>
+                                <li><p><b>Email</b>: h2rubik.shop@gmail.com</p></li>
+                                <li><p><b>Website</b>: https://rubikonline.vn</p></li>
+                                <li><b>KẾT NỐI VỚI CHÚNG TÔI</b>
+                            </ul>
+                            <ul class="footer-info">
+                                <li><a href=""><img src="images/social_facebook_icon.svg" alt="Facebook" loading="lazy"></a></li>
+                                <li><a href=""><img src="images/social_instagram_icon.svg" alt="Intagram" loading="lazy"></a></li>
+                                <li><a href=""><img src="images/social_shopee_icon.svg" alt="Shopee" loading="lazy"></a></li>
+                                <li><a href=""><img src="images/social_youtube_icon.svg" alt="Youtube" loading="lazy"></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>THÔNG TIN</h2>
+                            <ul class="footer-info-2">
+                                <li><a href="">- Chính sách bảo mật</a></li>
+                                <li><a href="">- Chính sách vận chuyển</a></li>
+                                <li><a href="">- Chính sách đổi trả</a></li>
+                                <li><a href="">- Quy định sử dụng</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>ĐĂNG KÝ NHẬN TIN</h2>
+                            <p>Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa.</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Nhập email của bạn..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">ĐĂNG KÝ</button>
+                                </div>
+                            </div>
+                            <p id="chungnhan">CHỨNG NHẬN</p>
+                            <ul class="chungnhan">
+                                <li><a href=""><img src="images/bocongthuong_1.webp"></a></li>
+                                <li><a href=""><img src="images/bocongthuong_2.webp"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Block-8">
+                <div class="bl8-container">
+                    <!-- <div class="row"> -->
+                        <p><i class="fa fa-copyright"></i> Bản quyền thuộc về <b>H2 Rubik Shop</b> | SINCE 2010</p>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>
